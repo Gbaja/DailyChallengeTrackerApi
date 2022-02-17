@@ -5,11 +5,13 @@ import config from 'config';
 import logger from './utils/logger';
 import connect from './utils/connect';
 import routes from './routes';
+import checkJwt from './utils/jwt';
 
 const port = config.get<number>("port")
 const app = express();
 
 app.use(express.json())
+app.use(checkJwt);
 
 app.listen(port, async () => {
   console.log(process.env.HELLO)
