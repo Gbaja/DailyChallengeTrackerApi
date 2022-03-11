@@ -1,8 +1,6 @@
 import { Request, Response } from 'express';
-import { omit } from 'lodash';
 
 import { createChallenge } from '../services/challenge.service';
-
 import loggger from '../utils/logger';
 
 
