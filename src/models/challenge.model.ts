@@ -32,6 +32,10 @@ const challengeSchema = new mongoose.Schema(
     startDate: { 
       type: Date,
       required: true
+    },
+    status: {
+      type: String,
+      required: true
     }
   },
   { timestamps: true }
